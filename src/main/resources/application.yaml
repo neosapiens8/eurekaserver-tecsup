@@ -1,11 +1,11 @@
+server:
+  port: 8761 # puerto de acceso
+
 spring:
   application:
-    name: pryeureka-registro
-
-server:
-  port: 8761
+    name: weurekaserver # nombre de la aplicación en un entorno Spring para microservicios
 
 eureka:
   client:
-    registry-with-eureka: false
-    fetch-registry: false # al conectarnos al servidor evita que jale configuraciones de los otros mictoservicios
+    register-with-eureka: false # indica si el cliente de Eureka (en este caso, tu aplicación Spring Boot) debe registrarse en el servidor de Eureka
+    fetch-registry: false # indica si al conectarnos al servidor jalara la lista de otros mictoservicios (resolver sus ubicaciones)
